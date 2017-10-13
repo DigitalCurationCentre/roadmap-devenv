@@ -26,12 +26,7 @@ class dcc::rubyrails {
     require => Rvm_gemset['ruby-2.2.3@dmproadmap'],
   }
 
-  class { 'postgresql::globals':
-    version => '9.6',
-    manage_package_repo => true,
-  } ->
   package { [
-             'postgresql96-devel',
              'mariadb-devel',
              'ImageMagick-devel',
             ] :
